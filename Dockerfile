@@ -9,4 +9,4 @@ RUN gem install bundler && bundle install
 
 ADD . /app/
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["./scripts/start_zendesk_search.rb"]

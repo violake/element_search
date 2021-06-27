@@ -4,14 +4,45 @@ This is a tickets search API which implemented by ruby, includes tickets, users,
 ## How to Run
 
 ### in Docker
+
+#### prerequisites
+
+- docker installed
+
+#### start zendesk search
+
 ```bash
-docker build -t ticket-search .
-docker run --rm -it --name ticket-search-app ticket-search
+docker build -t zendesk-search .
+docker run --rm -it --name zendesk-search-app zendesk-search
 
+```
 
-### notes
+### in local
 
-file = File.read('./lib/data_source/organizations.json')
+#### prerequisites
 
-data = JSON.parse(file, symbolize_names: true)
+- ruby 3.0.1 installed
+#### install gems
+
+```bash
+bundle install
+```
+
+#### test
+#### coverage/index.html shows test coverage details
+
+```bash
+rspec
+```
+
+#### code format
+
+```bash
+rubocop
+```
+
+#### start zendesk search
+```bash
+./scripts/run_zendesk_search.rb
+```
 
