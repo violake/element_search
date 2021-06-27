@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'data_search/searchable'
 
-class TestClass
+class TestSearchableClass
   extend DataSearch::Searchable
 
   file = File.read('./spec/test_data/elements.json')
@@ -18,15 +18,15 @@ end
 describe DataSearch::Searchable do
   describe 'element_hash' do
     it 'should create element_hash' do
-      expect(TestClass.element_hash).not_to be_nil
+      expect(TestSearchableClass.element_hash).not_to be_nil
     end
 
     it 'should create element_hash with correct count' do
-      expect(TestClass.element_hash.count).to eq 9
+      expect(TestSearchableClass.element_hash.count).to eq 9
     end
 
     it 'element_hash could find element by id_key' do
-      expect(TestClass.element_hash[:sulfax]).to eq(
+      expect(TestSearchableClass.element_hash[:sulfax]).to eq(
         {
           _id: 107,
           url: 'http://initech.zendesk.com/api/v2/organizations/107.json',
@@ -54,24 +54,24 @@ describe DataSearch::Searchable do
 
   describe 'search_hash' do
     it 'should create search_hash' do
-      expect(TestClass.search_hash).not_to be_nil
+      expect(TestSearchableClass.search_hash).not_to be_nil
     end
 
     it 'should create search_hash with correct indexes count' do
-      expect(TestClass.search_hash.count).to eq 8
+      expect(TestSearchableClass.search_hash.count).to eq 8
     end
 
     it 'should have integer inverted index _id point to id_key :name' do
-      expect(TestClass.search_hash[:_id][:'102']).to eq [:nutralab]
+      expect(TestSearchableClass.search_hash[:_id][:'102']).to eq [:nutralab]
     end
 
     it 'should have string inverted index external_id point to id_key :name' do
-      expect(TestClass.search_hash[:external_id][:'f6eb60ad-fe37-4a45-9689-b32031399f93'])
+      expect(TestSearchableClass.search_hash[:external_id][:'f6eb60ad-fe37-4a45-9689-b32031399f93'])
         .to eq [:xylar]
     end
 
     it 'should have array inverted index tags point to id_key :name' do
-      expect(TestClass.search_hash[:tags][:lindsay]).to eq [:plasmos]
+      expect(TestSearchableClass.search_hash[:tags][:lindsay]).to eq [:plasmos]
     end
   end
 end
