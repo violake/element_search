@@ -8,6 +8,7 @@ group :development, :test do
   gem 'pry'
   gem 'reek'
   gem 'rspec'
+  gem 'rspec-json_expectations'
   gem 'rubocop'
   gem 'simplecov'
 end
