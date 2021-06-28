@@ -1,9 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require 'pry'
 $LOAD_PATH.unshift('./lib')
-require 'zendesk_search_cli'
+require 'zendesk_search'
 
-ZendeskSearchCli.new.start('lailailai', 'fields like this') do |command|
-  puts "run command '#{command}'"
-end
+ZendeskSearch.new.start
