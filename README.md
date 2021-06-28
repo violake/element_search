@@ -54,6 +54,7 @@ rubocop
   so for association I chose to return array which could be empty.
 - CLI is very interesting application, I set a cli frame class which could adapt any search class
 - for memory efficiency, I use class object to save all elements hash and search hash(inverted indexes)
+- I made the assumption that all attr are searchable, so the trade-off is that there is no flexibility to config it
 
 
 ## Test coverage
