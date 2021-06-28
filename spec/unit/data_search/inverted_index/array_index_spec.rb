@@ -8,7 +8,9 @@ describe InvertedIndex::ArrayIndex do
     let(:value1) { :value1 }
     let(:value2) { :value2 }
 
-    subject { described_class.add_new_pair_to_search_hash(search_hash, key, array_value, element_id) }
+    subject do
+      described_class.add_new_pair_to_search_hash(search_hash, key, array_value, element_id)
+    end
 
     before do
       subject

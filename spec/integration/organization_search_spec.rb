@@ -81,7 +81,7 @@ describe DataSearch::OrganizationSearch do
               _id: 'b07a8c20-2ee5-493b-9ebf-f6321b95966e',
               assignee_id: 17,
               created_at: '2016-03-21T11:18:13 -11:00',
-              description: 'Laborum exercitation officia nulla in. Consequat et commodo fugiat velit magna sunt mollit.',
+              description: 'Laborum exercitation officia nulla in. Consequat et commodo fugiat velit magna sunt mollit.', # rubocop:disable Layout/LineLength
               due_at: '2016-08-04T12:30:08 -10:00',
               external_id: 'ca4452fc-b24d-4e06-a752-b15ee3fc42bb',
               has_incidents: true,
