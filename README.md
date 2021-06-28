@@ -43,7 +43,7 @@ rubocop
 
 #### start zendesk search
 ```bash
-./scripts/run_zendesk_search.rb
+./scripts/start_zendesk_search.rb
 ```
 
 ## Design
